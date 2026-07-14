@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mehmetcan.dev
+
+# Sitemaps
+Sitemap: https://mehmetcan.dev/sitemap.xml
