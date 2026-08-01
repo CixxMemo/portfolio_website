@@ -1,42 +1,13 @@
-import Link from "next/link";
-import { NavbarMobileToggle } from "./NavbarMobileToggle";
-
-const navLinks = [
-    { href: "/", label: "Ana Sayfa" },
-    { href: "/blog", label: "Blog" },
-    { href: "/about", label: "Hakkımda" },
-];
-
-export function Navbar() {
+export const Navbar = () => {
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
-            <nav
-                className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4"
-                aria-label="Ana navigasyon"
-            >
-                <Link
-                    href="/"
-                    className="logo-dot-wrapper font-heading text-lg font-bold tracking-tight text-text"
-                >
-                    MCK<span className="logo-dot text-accent">.</span>
-                    <span className="ml-1 text-sm font-normal text-muted">Blog</span>
-                </Link>
-
-                <ul className="hidden items-center gap-8 md:flex">
-                    {navLinks.map((link) => (
-                        <li key={link.href}>
-                            <Link
-                                href={link.href}
-                                className="link-underline text-sm font-medium text-muted transition-colors duration-150 hover:text-text"
-                            >
-                                {link.label}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-
-                <NavbarMobileToggle navLinks={navLinks} />
+        <header className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center mix-blend-difference text-white">
+            <div className="font-heading font-black text-2xl tracking-tighter uppercase">MCK.</div>
+            <nav className="flex gap-8 font-heading font-bold text-sm tracking-widest uppercase">
+                <a href="#hero" className="hover:text-orange transition-colors">Home</a>
+                <a href="#journey" className="hover:text-orange transition-colors">Journey</a>
+                <a href="#projects" className="hover:text-orange transition-colors">Work</a>
+                <a href="#contact" className="hover:text-orange transition-colors">Contact</a>
             </nav>
         </header>
     );
-}
+};

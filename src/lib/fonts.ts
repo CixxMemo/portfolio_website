@@ -1,22 +1,15 @@
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Outfit, Inter } from "next/font/google";
 
-export const spaceGrotesk = Space_Grotesk({
+export const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-outfit",
   display: "swap",
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  weight: ["400", "500", "600"],
-});
-
-export const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-  weight: ["400"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });

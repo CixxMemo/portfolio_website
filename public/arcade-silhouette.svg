@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <!-- Arcade Cabinet 1 (left) -->
+  <g opacity="0.025" fill="white">
+    <path d="M80 200 h80 v-40 h20 v-30 h-120 v30 h20 z"/>
+    <rect x="90" y="200" width="60" height="100" rx="0"/>
+    <rect x="95" y="210" width="50" height="35"/>
+    <rect x="100" y="260" width="10" height="10"/>
+    <rect x="120" y="255" width="20" height="5"/>
+    <rect x="120" y="265" width="5" height="15"/>
+    <rect x="130" y="265" width="5" height="15"/>
+    <rect x="85" y="300" width="70" height="80"/>
+    <rect x="85" y="380" width="25" height="20"/>
+    <rect x="130" y="380" width="25" height="20"/>
+  </g>
+  <!-- Arcade Cabinet 2 (center-right) -->
+  <g opacity="0.02" fill="white" transform="translate(850, 100) scale(1.3)">
+    <path d="M0 80 h100 v-50 h20 v-30 h-140 v30 h20 z"/>
+    <rect x="10" y="80" width="80" height="120" rx="0"/>
+    <rect x="15" y="90" width="70" height="45"/>
+    <rect x="25" y="150" width="12" height="12"/>
+    <rect x="45" y="145" width="25" height="6"/>
+    <rect x="45" y="157" width="6" height="18"/>
+    <rect x="56" y="157" width="6" height="18"/>
+    <rect x="5" y="200" width="90" height="100"/>
+    <rect x="5" y="300" width="30" height="25"/>
+    <rect x="65" y="300" width="30" height="25"/>
+  </g>
+  <!-- Arcade Cabinet 3 (small, bottom-left) -->
+  <g opacity="0.018" fill="white" transform="translate(300, 400) scale(0.8)">
+    <path d="M0 60 h70 v-35 h15 v-25 h-100 v25 h15 z"/>
+    <rect x="8" y="60" width="54" height="85"/>
+    <rect x="12" y="68" width="46" height="30"/>
+    <rect x="18" y="108" width="8" height="8"/>
+    <rect x="32" y="105" width="18" height="4"/>
+    <rect x="3" y="145" width="64" height="70"/>
+    <rect x="3" y="215" width="22" height="15"/>
+    <rect x="45" y="215" width="22" height="15"/>
+  </g>
+  <!-- Pixel decorative dots -->
+  <g opacity="0.015" fill="white">
+    <rect x="500" y="150" width="4" height="4"/>
+    <rect x="510" y="150" width="4" height="4"/>
+    <rect x="520" y="150" width="4" height="4"/>
+    <rect x="500" y="160" width="4" height="4"/>
+    <rect x="520" y="160" width="4" height="4"/>
+    <rect x="500" y="170" width="4" height="4"/>
+    <rect x="510" y="170" width="4" height="4"/>
+    <rect x="520" y="170" width="4" height="4"/>
+    
+    <rect x="700" y="500" width="4" height="4"/>
+    <rect x="710" y="500" width="4" height="4"/>
+    <rect x="700" y="510" width="4" height="4"/>
+    <rect x="710" y="510" width="4" height="4"/>
+    <rect x="720" y="505" width="4" height="4"/>
+  </g>
+</svg>

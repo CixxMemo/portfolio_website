@@ -1,4 +1,4 @@
-import type { BlogPost, Category, CategoryInfo } from "@/types";
+import type { BlogPost, Category, CategoryInfo, Project } from "@/types";
 
 /* ============================================================
    Blog content layer — file-based, no CMS needed.
@@ -225,4 +225,71 @@ export function getRelatedPosts(slug: string, limit = 2): BlogPost[] {
     return getPosts()
         .filter((p) => p.slug !== slug && p.category === current.category)
         .slice(0, limit);
+}
+
+/* ============================================================
+   Projects content layer
+   ============================================================ */
+
+const projects: Project[] = [
+    {
+        slug: "project-sentinel",
+        title: "Project Sentinel",
+        description: "Autonomous Drone Control system powered by AI.",
+        client: "AeroTech",
+        timeline: "6 Months",
+        stack: ["React", "Python", "OpenCV"],
+        role: "Lead Developer",
+        tags: ["AI", "Drones", "Automation"],
+        featured: true,
+        outcomes: [
+            { label: "Efficiency", value: "+40%" },
+            { label: "Latency", value: "< 20ms" }
+        ],
+        body: `## Problem\n\nManual drone control requires high cognitive load.\n\n## Solution\n\nAn AI-powered autonomous control system.\n\n## Results\n\nReduced required operator time significantly.`
+    },
+    {
+        slug: "pixel-dynamics",
+        title: "Pixel Dynamics",
+        description: "Retro Game Engine running on the web.",
+        client: "Indie Game Studio",
+        timeline: "3 Months",
+        stack: ["Next.js", "TypeScript", "Canvas API"],
+        role: "Frontend Engineer",
+        tags: ["Gaming", "WebAssembly"],
+        featured: true,
+        outcomes: [
+            { label: "FPS", value: "60+" },
+            { label: "Size", value: "< 2MB" }
+        ],
+        body: `## Problem\n\nWeb-based game engines are often bloated.\n\n## Solution\n\nA lightweight retro game engine.\n\n## Results\n\nSilky smooth 60 FPS gameplay on any device.`
+    },
+    {
+        slug: "synthflow",
+        title: "SynthFlow",
+        description: "Generative Music AI using advanced neural networks.",
+        client: "MusicTech Startup",
+        timeline: "4 Months",
+        stack: ["Python", "TensorFlow", "React"],
+        role: "AI Researcher",
+        tags: ["AI", "Music", "Generative"],
+        featured: true,
+        outcomes: [
+            { label: "Tracks", value: "10k+" },
+            { label: "Rating", value: "4.8/5" }
+        ],
+        body: `## Problem\n\nCreating royalty-free background music is expensive.\n\n## Solution\n\nA neural network capable of composing infinite unique tracks.\n\n## Results\n\nThousands of high-quality tracks produced for creators.`
+    }
+];
+
+export function getProjects(): Project[] {
+    return [...projects];
+}
+
+export function getProjectBySlug(slug: string): Project | undefined {
+    return projects.find((p) => p.slug === slug);
+}
+
+export function getFeaturedProjects(): Project[] {
+    return getProjects().filter((p) => p.featured);
 }

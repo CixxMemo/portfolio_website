@@ -1,15 +1,21 @@
-import { HeroSection } from "@/components/home/HeroSection";
-import { FeaturedPosts } from "@/components/home/FeaturedPosts";
-import { CategoryShowcase } from "@/components/home/CategoryShowcase";
-import { NewsletterCTA } from "@/components/home/NewsletterCTA";
+import { 
+    HeroSection, 
+    JourneySection, 
+    ProjectsSection, 
+    SkillsSection, 
+    BlogsSection, 
+    ContactSection 
+} from "@/components/features";
 
-export default function HomePage() {
+export default function Home() {
     return (
-        <>
+        <div className="flex flex-col w-full">
             <HeroSection />
-            <FeaturedPosts />
-            <CategoryShowcase />
-            <NewsletterCTA />
-        </>
+            <JourneySection />
+            <ProjectsSection />
+            <SkillsSection />
+            <BlogsSection />
+            <ContactSection />
+        </div>
     );
 }

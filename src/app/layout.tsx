@@ -1,21 +1,20 @@
 import type { Metadata } from "next";
-import { spaceGrotesk, inter, jetbrainsMono } from "@/lib/fonts";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { outfit, inter } from "@/lib/fonts";
+import { Navbar, Footer } from "@/components/layout";
 import "./globals.css";
 
 export const metadata: Metadata = {
     title: {
-        default: "MCK Blog — AI & Otomasyon",
-        template: "%s | MCK Blog",
+        default: "Mehmet Can Koçakurt — AI System Developer & Architect",
+        template: "%s | Mehmet Can Koçakurt",
     },
     description:
-        "Yapay zeka, otomasyon workflow'ları, AI agent'lar ve pratik rehberler. n8n, Make, OpenAI ve daha fazlası.",
+        "Portfolio of Mehmet Can Koçakurt, AI System Developer & Architect.",
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mehmetcan.dev"),
     openGraph: {
         type: "website",
-        locale: "tr_TR",
-        siteName: "MCK Blog",
+        locale: "en_US",
+        siteName: "Mehmet Can Koçakurt",
         images: [{ url: "/og-default.png", width: 1200, height: 630 }],
     },
     twitter: {
@@ -33,18 +32,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="tr" className="dark">
+        <html lang="en" className="dark">
             <body
-                className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
+                className={`${outfit.variable} ${inter.variable} antialiased`}
             >
-                <a href="#main-content" className="skip-link">
-                    İçeriğe atla
-                </a>
-                <Navbar />
-                <main id="main-content" className="min-h-screen pt-[65px]">
-                    {children}
-                </main>
-                <Footer />
+                <div className="flex flex-col min-h-screen">
+                    <Navbar />
+                    <main id="main-content" className="flex-1">
+                        {children}
+                    </main>
+                    <Footer />
+                </div>
             </body>
         </html>
     );

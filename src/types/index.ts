@@ -38,3 +38,18 @@ export interface ContactFormData {
     loomLink?: string;
     honeypot?: string;
 }
+
+export interface Project {
+    slug: string;
+    title: string;
+    description: string;
+    client: string;
+    timeline: string;
+    stack: string[];
+    role: string;
+    tags: string[];
+    featured: boolean;
+    coverImage?: string;
+    outcomes: { label: string; value: string }[];
+    body: string;
+}
