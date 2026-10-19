@@ -1,21 +1,20 @@
 import type { Metadata } from "next";
 import { outfit, inter } from "@/lib/fonts";
 import { Navbar, Footer } from "@/components/layout";
+import { siteConfig } from "@/config";
 import "./globals.css";
 
 export const metadata: Metadata = {
     title: {
-        default: "Mehmet Can Koçakurt — AI System Developer & Architect",
-        template: "%s | Mehmet Can Koçakurt",
+        default: siteConfig.title,
+        template: `%s | ${siteConfig.name}`,
     },
-    description:
-        "Portfolio of Mehmet Can Koçakurt, AI System Developer & Architect.",
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mehmetcan.dev"),
+    description: siteConfig.description,
+    metadataBase: new URL(siteConfig.url),
     openGraph: {
         type: "website",
-        locale: "en_US",
-        siteName: "Mehmet Can Koçakurt",
-        images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        locale: siteConfig.locale,
+        siteName: siteConfig.name,
     },
     twitter: {
         card: "summary_large_image",
@@ -32,7 +31,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="dark">
+        <html lang="en">
             <body
                 className={`${outfit.variable} ${inter.variable} antialiased`}
             >

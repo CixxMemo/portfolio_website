@@ -111,8 +111,8 @@ export const HeroSection = () => {
                                     <div className={`
                                         w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-sm md:text-xl font-bold transition-all duration-300 group-hover:scale-110 shadow-lg relative
                                         ${node.label === "AI" 
-                                            ? "bg-orange text-navy shadow-[0_0_20px_rgba(255,107,0,0.3)]" 
-                                            : "bg-[#0b132b]/80 border-2 border-white/20 text-white group-hover:border-orange/50 group-hover:text-orange backdrop-blur-sm"
+                                            ? "bg-orange text-navy shadow-glow-orange" 
+                                            : "bg-navy/80 border-2 border-white/20 text-white group-hover:border-orange/50 group-hover:text-orange backdrop-blur-sm"
                                         }
                                     `}>
                                         {node.label}

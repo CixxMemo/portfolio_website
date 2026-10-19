@@ -44,7 +44,7 @@ export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
             
             {/* Modal Content */}
             <div 
-                className={`relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto m-4 border-4 border-navy shadow-[16px_16px_0_0_rgba(11,19,43,1)] transition-transform duration-300 ${
+                className={`relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto m-4 border-4 border-navy shadow-brutal transition-transform duration-300 ${
                     isOpen ? "scale-100 translate-y-0" : "scale-95 translate-y-8"
                 }`}
             >
